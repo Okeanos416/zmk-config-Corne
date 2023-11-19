@@ -79,8 +79,8 @@
                 raise_layer {
                         bindings = <
         //╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮   ╭────────────┬────────────┬───────────────┬─────────────┬────────────┬───────────╮
-        //|  TAB       |  !         |  @         |  up        |  $         |  %         |   |  ^         |  &         |  m UP MOVE_VERT        |  (          |  )         | BKSP      |
-            &kp TAB      &kp EXCL     &kp AT       &kp UP       &kp DLLR     &kp PRCNT        &kp CARET    &kp AMPS     &mmv MOVE_UP          &kp LPAR      &kp RPAR     &kp BSPC    
+        //|  TAB       |  !         |  @         |  up        |  $         |  %         |   |  ^         |  &         |  m UP         |  (          |  )         | BKSP      |
+            &kp TAB      &kp EXCL     &kp AT       &kp UP       &kp DLLR     &kp PRCNT        &kp CARET    &kp AMPS     &mmv MOVE_UP MOVE_VERT         &kp LPAR      &kp RPAR     &kp BSPC    
         //├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼───────────────┼─────────────┼────────────┼───────────┤
         //| CTRL       |            |  left      |  down      |  right     |            |   |  -         |  n LEFT    |  m DOWN       |  m RIGHT    |  \         |  `        |
             &kp LCTRL    &trans       &kp LEFT     &kp DOWN     &kp RIGHT    &trans           &kp MINUS    &mmv MOVE_LEFT MOVE_HOR      &mmv MOVE_DOWN MOVE_VERT         &mmv MOVE_RIGHT MOVE_HOR       &kp BSLH     &kp GRAVE
