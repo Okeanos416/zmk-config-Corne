@@ -87,7 +87,7 @@
                         bindings = <
         //╭────────────┬────────────┬────────────────┬──────────────────────┬───────────────────┬──────────────────╮   ╭────────────┬─────────────────┬───────────────────┬──────────────────┬──────────────────┬───────────╮
         //|  TAB       |            |  R click       |  m up                |  L click          |  Scroll up       |   |            |  R click        |  m UP             |  L click         |  Scroll up       |           |
-            &kp TAB      &trans       &mkp LCLK        &mmv MOVE_UP           &mkp RCLK           &mwh SCROLL_UP         &trans       &mkp LCLK         &mmv MOVE_UP        &mkp RCLK          &mwh SCROLL_UP     &trans       
+            &kp TAB      &trans       &mkp RCLK        &mmv MOVE_UP           &mkp LCLK           &mwh SCROLL_UP         &trans       &mkp LCLK         &mmv MOVE_UP        &mkp RCLK          &mwh SCROLL_UP     &trans       
         //├────────────┼────────────┼────────────────┼──────────────────────┼───────────────────┼──────────────────┤   ├────────────┼─────────────────┼───────────────────┼──────────────────┼──────────────────┼───────────┤
         //| CTRL       |            |  m left        |  m down              |  m right          |  Scroll down     |   |            |  n LEFT         |  m DOWN           |  m RIGHT         |  Scroll down     |           |
             &kp LCTRL    &trans       &mmv MOVE_LEFT   &mmv MOVE_DOWN         &mmv MOVE_RIGHT     &mwh SCROLL_DOWN       &trans       &mmv MOVE_LEFT    &mmv MOVE_DOWN      &mmv MOVE_RIGHT    &mwh SCROLL_DOWN   &trans   
