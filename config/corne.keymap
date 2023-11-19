@@ -23,14 +23,6 @@
 
 / {
     behaviors {
-        /omit-if-no-ref/ mmv: behavior_mouse_move {
-                compatible = "zmk,behavior-mouse-move";
-                label = "MOUSE_MOVE";
-                #binding-cells = <1>;
-                delay-ms = <0>;
-                time-to-max-speed-ms = <300>;
-                acceleration-exponent = <1>;
-            };
         ht: hold_tap {
             label = "hold_tap";
             compatible = "zmk,behavior-hold-tap";
