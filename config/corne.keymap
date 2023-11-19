@@ -22,8 +22,19 @@
 #define Func 3
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <0 5>;
+            bindings = <&tog Dir>;
+        };
+    };
+};
+
+/ {
     behaviors {
-        htmmv: hold_tap {
+        ht: hold_tap {
             label = "hold_tap";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -75,14 +86,14 @@
                 raise_layer {
                         bindings = <
         //╭────────────┬────────────┬────────────────┬──────────────────────┬───────────────────┬──────────────────╮   ╭────────────┬─────────────────┬───────────────────┬──────────────────┬──────────────────┬───────────╮
-        //|  TAB       |            |  left          |  m up                |  right            |  Scroll up       |   |            |  R click        |  m UP             |  L click         |  Scroll up       |           |
-            &kp TAB      &trans       &kp LEFT         &htmmv MOVE_UP UP      &kp RIGHT           &mwh SCROLL_UP        &trans       &mkp LCLK         &mmv MOVE_UP        &mkp RCLK          &mwh SCROLL_UP     &trans       
+        //|  TAB       |            |  R click       |  m up                |  L click          |  Scroll up       |   |            |  R click        |  m UP             |  L click         |  Scroll up       |           |
+            &kp TAB      &trans       &mkp LCLK        &mmv MOVE_UP           &mkp RCLK           &mwh SCROLL_UP         &trans       &mkp LCLK         &mmv MOVE_UP        &mkp RCLK          &mwh SCROLL_UP     &trans       
         //├────────────┼────────────┼────────────────┼──────────────────────┼───────────────────┼──────────────────┤   ├────────────┼─────────────────┼───────────────────┼──────────────────┼──────────────────┼───────────┤
         //| CTRL       |            |  m left        |  m down              |  m right          |  Scroll down     |   |            |  n LEFT         |  m DOWN           |  m RIGHT         |  Scroll down     |           |
-            &kp LCTRL    &trans       &mmv MOVE_LEFT   &htmmv MOVE_DOWN DOWN  &mmv MOVE_RIGHT     &mwh SCROLL_DOWN        &trans       &mmv MOVE_LEFT    &mmv MOVE_DOWN      &mmv MOVE_RIGHT    &mwh SCROLL_DOWN   &trans   
+            &kp LCTRL    &trans       &mmv MOVE_LEFT   &mmv MOVE_DOWN         &mmv MOVE_RIGHT     &mwh SCROLL_DOWN       &trans       &mmv MOVE_LEFT    &mmv MOVE_DOWN      &mmv MOVE_RIGHT    &mwh SCROLL_DOWN   &trans   
         //├────────────┼────────────┼────────────────┼──────────────────────┼───────────────────┼──────────────────┤   ├────────────┼─────────────────┼───────────────────┼──────────────────┼──────────────────┼───────────┤
-        //| SHFT       |            |  R click       |                      |  L click          |                  |   |            |                 |                   |                  |                  |           |
-            &kp LSHFT    &trans       &mkp LCLK        &trans                 &mkp RCLK           &trans                &trans       &trans            &trans              &trans             &trans             &trans      
+        //| SHFT       |            |                |                      |  left             |  right           |   |  up        |  down           |                   |                  |                  |           |
+            &kp LSHFT    &trans       &trans           &trans                 &kp LEFT            &kp RIGHT              &kp UP       &kp Down          &trans              &trans             &trans             &trans      
         //╰────────────┴────────────┴────────────────┼──────────────────────┼───────────────────┼──────────────────┤   ├────────────┼─────────────────┼───────────────────┼──────────────────┴──────────────────┴───────────╯
                                                        &kp LGUI               &trans              &kp SPACE              &trans       &trans            &trans
         //                                           ╰──────────────────────┴───────────────────┴──────────────────╯   ╰────────────┴─────────────────┴───────────────────╯
