@@ -10,15 +10,15 @@
 #include <dt-bindings/zmk/outputs.h>
 
 // Home row mods macro
-#define HRML(k2,k3,k4) &ht TAB k2  &ht LCTRL k3  &ht LGUI k4
-#define HRMR(k1,k2,k3) &ht RGUI k1  &ht RCTRL k2  &ht TAB k3
+#define HRML(k2,k3,k4) &ht TAB k2  &ht LALT k3  &ht LGUI k4
+#define HRMR(k1,k2,k3) &ht RGUI k1  &ht RALT k2  &ht TAB k3
 #define WHRML(k2,k3,k4) &ht LALT k2  &ht LGUI k3  &ht LCTRL k4
 #define WHRMR(k1,k2,k3) &ht RCTRL k1  &ht RGUI k2  &ht RALT k3
 
 #define Def 0
 #define Num 1
 #define Dir 2
-#define Blt 3
+#define Func 3
 
 / {
     behaviors {
@@ -41,15 +41,15 @@
                         bindings = <
         //╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮   ╭────────────┬────────────┬────────────┬─────────────┬────────────┬───────────╮
         //│  DEL       │  Q         │  W         │  E         │  R         │  T         │   │  Y         │  U         │  I         │  O          │  P         │  BSPC     │
-            &kp DEL      &kp Q        &kp W         &kp E       &kp R        &kp T            &kp Y        &kp U        &kp I        &kp O        &kp P        &kp BSPC   
+            &kp DEL      &kp Q        &kp W         &kp E       &kp R        &kp T            &kp Y        &kp U        &kp I        &kp O         &kp P        &kp BSPC   
         //├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼─────────────┼────────────┼───────────┤
         //│  SHFT      │  A         │  S         │  D         │  F         │  G         │   │  H         │  J         │  K         │  L          │  ; :       │  ' "      │
-            &kp LSHFT   &kp A         HRML(S,      D,           F)        &kp G               &kp H        HRMR(J,      K,           L)            &kp SEMI     &kp SQT    
+            &kp LSHFT   &kp A         HRML(S,      D,           F)           &kp G            &kp H        HRMR(J,      K,           L)            &kp SEMI     &kp SQT    
         //├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼─────────────┼────────────┼───────────┤
         //│  CTRL      │  Z         │  X         │  C         │  V         │  B         │   │  N         │  M         │ , <        │ . >         │ / ?        │  ESC      │
-            &kp LCTRL    &kp Z        &kp X        &kp C        &kp V        &kp B            &kp N        &kp M        &kp COMMA    &kp DOT       &kp FSLH     &lt Blt ESC   
+            &kp LCTRL    &kp Z        &kp X        &kp C        &kp V        &kp B            &kp N        &kp M        &kp COMMA    &kp DOT       &kp FSLH     &lt Func ESC   
         //╰────────────┴────────────┴────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼─────────────┴────────────┴───────────╯
-                                                  &kp BSPC     &kp SPACE    &lt Num ENTER      &kp ENTER    &kp SPACE    &lt Dir BSPC
+                                                   &kp BSPC     &kp SPACE    &lt Num ENTER    &kp ENTER    &kp SPACE    &lt Dir BSPC
         //                                       ╰────────────┴────────────┴────────────╯   ╰────────────┴────────────┴────────────╯
                         >;
                 };
@@ -64,7 +64,7 @@
             &kp LSHFT    &kp LBKT     &kp N4       &kp N5       &kp N6       &kp RBKT         &kp KP_MULTIPLY   &kp KP_DIVIDE   &kp F5       &kp F6       &kp F7       &kp F8      
         //├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├─────────────────┼───────────────┼────────────┼────────────┼────────────┼─────────────┤
         //│  ALT       │  {         │  1         │  2         │  3         │  }         │   │  =              │  $            │  F9        │  F10       │  F11       │  F12        │
-            &kp LALT     &kp LBRC    &kp N1        &kp N2       &kp N3       &kp RBRC         &kp KP_EQUAL      &kp DLLR        &kp F9       &kp F10      &kp F11      &kp F12     
+            &kp LCTRL    &kp LBRC     &kp N1       &kp N2       &kp N3       &kp RBRC         &kp KP_EQUAL      &kp DLLR        &kp F9       &kp F10      &kp F11      &kp F12     
         //╰────────────┴────────────┴────────────┼────────────┼────────────┼────────────┤   ├─────────────────┼───────────────┼────────────┼────────────┴────────────┴─────────────╯
                                                    &trans        &kp N0      &trans           &trans            &trans          &trans
         //                                       ╰────────────┴────────────┴────────────╯   ╰─────────────────┴───────────────┴────────────╯
@@ -78,10 +78,10 @@
             &kp TAB      &kp EXCL     &kp AT       &kp UP       &kp DLLR     &kp PRCNT        &kp CARET    &kp AMPS     &trans         &kp LPAR      &kp RPAR     &kp BSPC    
         //├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼───────────────┼─────────────┼────────────┼───────────┤
         //| CTRL       |            |  left      |  down      |  right     |            |   |  -         |  n LEFT    |  m DOWN       |  m RIGHT    |  \         |  `        |
-            &kp LCTRL    &trans       &kp LEFT     &kp DOWN     &kp RIGHT    &trans           &kp MINUS    &trans      &trans         &trans       &kp BSLH     &kp GRAVE
+            &kp LCTRL    &trans       &kp LEFT     &kp DOWN     &kp RIGHT    &trans           &kp MINUS    &trans       &trans         &trans       &kp BSLH     &kp GRAVE
         //├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼───────────────┼─────────────┼────────────┼───────────┤
         //| SHFT       |            |            |            |            |            |   |  _         |  +         |  {            |  }          | "|"        |  ~        |
-            &kp LSHFT    &trans      &trans       &trans       &trans         &trans          &kp UNDER    &kp PLUS     &kp LBRC        &kp RBRC      &kp PIPE     &kp TILDE   
+            &kp LSHFT    &trans       &trans       &trans       &trans       &trans           &kp UNDER    &kp PLUS     &kp LBRC        &kp RBRC      &kp PIPE     &kp TILDE   
         //╰────────────┴────────────┴────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼───────────────┼─────────────┴────────────┴───────────╯
                                                    &kp LGUI     &trans       &kp SPACE        &kp RET      &trans       &trans
         //                                       ╰────────────┴────────────┴────────────╯   ╰────────────┴────────────┴───────────────╯
@@ -90,18 +90,18 @@
 
                 bluetooth_layer {
                         bindings = <
-        //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭────────────┬────────────┬────────────┬─────────────┬────────────┬───────────╮
-        //│             │             │             │             │             │             │   │            │            │            │             │            │           │
-            &kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &kp F6            &kp F7       &kp F8       &kp F9       &kp F10       &kp F11      &kp F12    
-        //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├────────────┼────────────┼────────────┼─────────────┼────────────┼───────────┤
-        //│  BT clear   │  BT0        │  BT1        │  BT2        │  BT3        │  BT4        │   │            │            │            │             │            │           │
-            &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &trans       &trans       &trans       &trans        &trans       &trans    
-        //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├────────────┼────────────┼────────────┼─────────────┼────────────┼───────────┤
-        //│             │             │             │             │             │             │   │            │            │            │             │            │           │
-            &trans        &trans        &trans        &trans        &trans        &trans             &trans      &trans       &trans       &trans        &trans       &trans   
-        //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├────────────┼────────────┼────────────┼─────────────┴────────────┴───────────╯
-                                                      &trans        &trans        &trans            &trans       &trans       &trans
-        //                                          ╰─────────────┴─────────────┴─────────────╯   ╰────────────┴────────────┴────────────╯
+        //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭───────────────┬───────────────┬────────────┬─────────────┬────────────┬───────────╮
+        //│             │             │             │             │             │             │   │               │               │            │             │            │           │
+            &kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &kp F6            &kp F7          &kp F8          &kp F9       &kp F10       &kp F11      &kp F12    
+        //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├───────────────┼───────────────┼────────────┼─────────────┼────────────┼───────────┤
+        //│  BT clear   │  BT0        │  BT1        │  BT2        │  BT3        │  BT4        │   │  PREV         │  NEXT         │  PLAY      │             │            │           │
+            &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &kp C_PREV      &kp C_NEXT      &kp C_PP   &trans        &trans       &trans    
+        //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├───────────────┼───────────────┼────────────┼─────────────┼────────────┼───────────┤
+        //│             │             │             │             │             │             │   │  BRIGHT       │  DIM          │            │             │            │           │
+            &trans        &trans        &trans        &trans        &trans        &trans            &kp C_BRI_UP    &kp C_BRI_DN    &trans       &trans        &trans       &trans   
+        //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├───────────────┼───────────────┼────────────┼─────────────┴────────────┴───────────╯
+                                                      &trans        &trans        &trans            &kp C_VOL_UP    &kp C_VOL_DN    &kp C_MUTE
+        //                                          ╰─────────────┴─────────────┴─────────────╯   ╰───────────────┴───────────────┴────────────╯
                         >;
                 };
         };
