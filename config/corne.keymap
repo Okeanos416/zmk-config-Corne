@@ -93,7 +93,7 @@
             &kp LCTRL    &trans       &mmv MOVE_LEFT   &mmv MOVE_DOWN         &mmv MOVE_RIGHT     &mwh SCROLL_DOWN       &trans       &mmv MOVE_LEFT    &mmv MOVE_DOWN      &mmv MOVE_RIGHT    &mwh SCROLL_DOWN   &trans   
         //├────────────┼────────────┼────────────────┼──────────────────────┼───────────────────┼──────────────────┤   ├────────────┼─────────────────┼───────────────────┼──────────────────┼──────────────────┼───────────┤
         //| SHFT       |            |                |                      |  left             |  right           |   |  up        |  down           |                   |                  |                  |           |
-            &kp LSHFT    &trans       &trans           &trans                 &kp LEFT            &kp RIGHT              &kp UP       &kp Down          &trans              &trans             &trans             &trans      
+            &kp LSHFT    &trans       &trans           &trans                 &kp LEFT            &kp RIGHT              &kp UP       &kp DOWN          &trans              &trans             &trans             &trans      
         //╰────────────┴────────────┴────────────────┼──────────────────────┼───────────────────┼──────────────────┤   ├────────────┼─────────────────┼───────────────────┼──────────────────┴──────────────────┴───────────╯
                                                        &kp LGUI               &trans              &kp SPACE              &trans       &trans            &trans
         //                                           ╰──────────────────────┴───────────────────┴──────────────────╯   ╰────────────┴─────────────────┴───────────────────╯
