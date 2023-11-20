@@ -11,8 +11,8 @@
 #include <dt-bindings/zmk/mouse.h>
 
 // Home row mods macro
-#define HRML(k2,k3,k4) &ht TAB k2  &ht LALT k3  &ht LGUI k4
-#define HRMR(k1,k2,k3) &ht RGUI k1  &ht RALT k2  &ht TAB k3
+#define HRML(k2,k3,k4) &ht TAB k2  &ht LGUI k3  &ht LALT k4
+#define HRMR(k1,k2,k3) &ht RGUI k1  &ht TAB k2  &ht RALT k3
 #define WHRML(k2,k3,k4) &ht LALT k2  &ht LGUI k3  &ht LCTRL k4
 #define WHRMR(k1,k2,k3) &ht RCTRL k1  &ht RGUI k2  &ht RALT k3
 
@@ -85,18 +85,18 @@
 
                 raise_layer {
                         bindings = <
-        //╭────────────┬────────────┬────────────────┬──────────────────────┬───────────────────┬──────────────────╮   ╭────────────┬─────────────────┬───────────────────┬──────────────────┬──────────────────┬───────────╮
-        //|  TAB       |            |  R click       |  m up                |  L click          |  Scroll up       |   |            |  R click        |  m UP             |  L click         |  Scroll up       |           |
-            &kp TAB      &trans       &mkp RCLK        &mmv MOVE_UP           &mkp LCLK           &mwh SCROLL_UP         &trans       &mkp LCLK         &mmv MOVE_UP        &mkp RCLK          &mwh SCROLL_UP     &trans       
-        //├────────────┼────────────┼────────────────┼──────────────────────┼───────────────────┼──────────────────┤   ├────────────┼─────────────────┼───────────────────┼──────────────────┼──────────────────┼───────────┤
-        //| CTRL       |            |  m left        |  m down              |  m right          |  Scroll down     |   |            |  n LEFT         |  m DOWN           |  m RIGHT         |  Scroll down     |           |
-            &kp LCTRL    &trans       &mmv MOVE_LEFT   &mmv MOVE_DOWN         &mmv MOVE_RIGHT     &mwh SCROLL_DOWN       &trans       &mmv MOVE_LEFT    &mmv MOVE_DOWN      &mmv MOVE_RIGHT    &mwh SCROLL_DOWN   &trans   
-        //├────────────┼────────────┼────────────────┼──────────────────────┼───────────────────┼──────────────────┤   ├────────────┼─────────────────┼───────────────────┼──────────────────┼──────────────────┼───────────┤
-        //| SHFT       |            |                |                      |  left             |  right           |   |  up        |  down           |                   |                  |                  |           |
-            &kp LSHFT    &trans       &trans           &trans                 &kp LEFT            &kp RIGHT              &kp UP       &kp DOWN          &trans              &trans             &trans             &trans      
-        //╰────────────┴────────────┴────────────────┼──────────────────────┼───────────────────┼──────────────────┤   ├────────────┼─────────────────┼───────────────────┼──────────────────┴──────────────────┴───────────╯
-                                                       &kp LGUI               &trans              &kp SPACE              &trans       &trans            &trans
-        //                                           ╰──────────────────────┴───────────────────┴──────────────────╯   ╰────────────┴─────────────────┴───────────────────╯
+        //╭────────────┬────────────┬────────────────┬────────────────┬───────────────────┬──────────────────╮   ╭────────────┬─────────────────┬───────────────────┬──────────────────┬──────────────────┬───────────╮
+        //|  TAB       |            |  R click       |  m up          |  L click          |  Scroll up       |   |            |  R click        |  m UP             |  L click         |  Scroll up       |           |
+            &kp TAB      &trans       &mkp RCLK        &mmv MOVE_UP     &mkp LCLK           &mwh SCROLL_UP         &trans       &mkp LCLK         &mmv MOVE_UP        &mkp RCLK          &mwh SCROLL_UP     &trans       
+        //├────────────┼────────────┼────────────────┼────────────────┼───────────────────┼──────────────────┤   ├────────────┼─────────────────┼───────────────────┼──────────────────┼──────────────────┼───────────┤
+        //| CTRL       |            |  m left        |  m down        |  m right          |  Scroll down     |   |            |  n LEFT         |  m DOWN           |  m RIGHT         |  Scroll down     |           |
+            &kp LCTRL    &trans       &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT     &mwh SCROLL_DOWN       &trans       &mmv MOVE_LEFT    &mmv MOVE_DOWN      &mmv MOVE_RIGHT    &mwh SCROLL_DOWN   &trans   
+        //├────────────┼────────────┼────────────────┼────────────────┼───────────────────┼──────────────────┤   ├────────────┼─────────────────┼───────────────────┼──────────────────┼──────────────────┼───────────┤
+        //| SHFT       |            |                |                |  left             |  right           |   |  up        |  down           |                   |                  |                  |           |
+            &kp LSHFT    &trans       &trans           &trans           &kp LEFT            &kp RIGHT              &kp UP       &kp DOWN          &trans              &trans             &trans             &trans      
+        //╰────────────┴────────────┴────────────────┼────────────────┼───────────────────┼──────────────────┤   ├────────────┼─────────────────┼───────────────────┼──────────────────┴──────────────────┴───────────╯
+                                                       &kp LGUI         &trans              &kp SPACE              &trans       &trans            &trans
+        //                                           ╰────────────────┴───────────────────┴──────────────────╯   ╰────────────┴─────────────────┴───────────────────╯
                         >;
                 };
 
