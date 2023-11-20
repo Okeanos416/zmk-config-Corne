@@ -46,7 +46,7 @@
         };
     };
 
-        keymap {
+        keymap {f
                 compatible = "zmk,keymap";
 
                 default_layer {
