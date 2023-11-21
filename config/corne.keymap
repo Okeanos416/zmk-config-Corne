@@ -11,7 +11,7 @@
 #include <dt-bindings/zmk/mouse.h>
 
 // Home row mods macro
-#define HRML(k2,k3,k4) &ht TAB k2  &ht LGUI k3  &ht LALT k4
+#define HRML(k2,k3,k4) &ht LALT k2  &ht TAB k3  &ht LGUI k4
 #define HRMR(k1,k2,k3) &ht RGUI k1  &ht TAB k2  &ht RALT k3
 #define WHRML(k2,k3,k4) &ht LALT k2  &ht LGUI k3  &ht LCTRL k4
 #define WHRMR(k1,k2,k3) &ht RCTRL k1  &ht RGUI k2  &ht RALT k3
@@ -26,7 +26,7 @@
         compatible = "zmk,combos";
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <0 5>;
+            key-positions = <2 3 4>;
             bindings = <&tog Dir>;
         };
     };
@@ -46,7 +46,7 @@
         };
     };
 
-        keymap {f
+        keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
@@ -69,16 +69,16 @@
                 lower_layer {
                         bindings = <
         //╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮   ╭─────────────────┬───────────────┬────────────┬────────────┬────────────┬─────────────╮
-        //│  BSPC      │  (         │  7         │  8         │  9         │  )         │   │  +              │  -            │  F1        │  F2        │  F3        │  F4         │
-            &kp BSPC     &kp LPAR     &kp N7       &kp N8       &kp N9      &kp RPAR          &kp PLUS         &kp MINUS        &kp F1      &kp F2       &kp F3       &kp F4      
+        //│            │  (         │  7         │  8         │  9         │  )         │   │  +              │  -            │  F1        │  F2        │  F3        │  F4         │
+            &trans       &kp LPAR     &kp N7       &kp N8       &kp N9      &kp RPAR          &kp PLUS         &kp MINUS        &kp F1      &kp F2       &kp F3       &kp F4      
         //├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├─────────────────┼───────────────┼────────────┼────────────┼────────────┼─────────────┤
-        //│  SHFT      │  [         │  4         │  5         │  6         │  ]         │   │  *              │  /            │  F5        │  F6        │  F7        │  F8         │
-            &kp LSHFT    &kp LBKT     &kp N4       &kp N5       &kp N6       &kp RBKT         &kp KP_MULTIPLY   &kp KP_DIVIDE   &kp F5       &kp F6       &kp F7       &kp F8      
+        //│            │  [         │  4         │  5         │  6         │  ]         │   │  *              │  /            │  F5        │  F6        │  F7        │  F8         │
+            &trans       &kp LBKT     &kp N4       &kp N5       &kp N6       &kp RBKT         &kp KP_MULTIPLY   &kp KP_DIVIDE   &kp F5       &kp F6       &kp F7       &kp F8      
         //├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├─────────────────┼───────────────┼────────────┼────────────┼────────────┼─────────────┤
-        //│  ALT       │  {         │  1         │  2         │  3         │  }         │   │  =              │  $            │  F9        │  F10       │  F11       │  F12        │
-            &kp LCTRL    &kp LBRC     &kp N1       &kp N2       &kp N3       &kp RBRC         &kp KP_EQUAL      &kp DLLR        &kp F9       &kp F10      &kp F11      &kp F12     
+        //│            │  {         │  1         │  2         │  3         │  }         │   │  =              │  $            │  F9        │  F10       │  F11       │  F12        │
+            &trans       &kp LBRC     &kp N1       &kp N2       &kp N3       &kp RBRC         &kp KP_EQUAL      &kp DLLR        &kp F9       &kp F10      &kp F11      &kp F12     
         //╰────────────┴────────────┴────────────┼────────────┼────────────┼────────────┤   ├─────────────────┼───────────────┼────────────┼────────────┴────────────┴─────────────╯
-                                                   &trans        &kp N0      &trans           &trans            &trans          &trans
+                                                   &kp DOT      &kp N0       &trans           &trans            &trans          &trans
         //                                       ╰────────────┴────────────┴────────────╯   ╰─────────────────┴───────────────┴────────────╯
                         >;
                 };
@@ -86,14 +86,14 @@
                 raise_layer {
                         bindings = <
         //╭────────────┬────────────┬────────────────┬────────────────┬───────────────────┬──────────────────╮   ╭────────────┬─────────────────┬───────────────────┬──────────────────┬──────────────────┬───────────╮
-        //|  TAB       |            |  R click       |  m up          |  L click          |  Scroll up       |   |            |  R click        |  m UP             |  L click         |  Scroll up       |           |
-            &kp TAB      &trans       &mkp RCLK        &mmv MOVE_UP     &mkp LCLK           &mwh SCROLL_UP         &trans       &mkp LCLK         &mmv MOVE_UP        &mkp RCLK          &mwh SCROLL_UP     &trans       
+        //|  TAB       |  ALT       |  R click       |  m up          |  L click          |  Scroll up       |   |            |  R click        |  m UP             |  L click         |  Scroll up       |           |
+            &kp TAB      &kp LALT     &mkp RCLK        &mmv MOVE_UP     &mkp LCLK           &mwh SCROLL_UP         &trans       &mkp LCLK         &mmv MOVE_UP        &mkp RCLK          &mwh SCROLL_UP     &trans       
         //├────────────┼────────────┼────────────────┼────────────────┼───────────────────┼──────────────────┤   ├────────────┼─────────────────┼───────────────────┼──────────────────┼──────────────────┼───────────┤
-        //| CTRL       |            |  m left        |  m down        |  m right          |  Scroll down     |   |            |  n LEFT         |  m DOWN           |  m RIGHT         |  Scroll down     |           |
-            &kp LCTRL    &trans       &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT     &mwh SCROLL_DOWN       &trans       &mmv MOVE_LEFT    &mmv MOVE_DOWN      &mmv MOVE_RIGHT    &mwh SCROLL_DOWN   &trans   
+        //| SHFT       |            |  m left        |  m down        |  m right          |  Scroll down     |   |            |  n LEFT         |  m DOWN           |  m RIGHT         |  Scroll down     |           |
+            &kp LSHFT    &trans       &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT     &mwh SCROLL_DOWN       &trans       &mmv MOVE_LEFT    &mmv MOVE_DOWN      &mmv MOVE_RIGHT    &mwh SCROLL_DOWN   &trans   
         //├────────────┼────────────┼────────────────┼────────────────┼───────────────────┼──────────────────┤   ├────────────┼─────────────────┼───────────────────┼──────────────────┼──────────────────┼───────────┤
-        //| SHFT       |            |                |                |  left             |  right           |   |  up        |  down           |                   |                  |                  |           |
-            &kp LSHFT    &trans       &trans           &trans           &kp LEFT            &kp RIGHT              &kp UP       &kp DOWN          &trans              &trans             &trans             &trans      
+        //| LGUI       |            |                |                |  left             |  right           |   |  up        |  down           |                   |                  |                  |           |
+            &kp LGUI     &trans       &trans           &trans           &kp LEFT            &kp RIGHT              &kp UP       &kp DOWN          &trans              &trans             &trans             &trans      
         //╰────────────┴────────────┴────────────────┼────────────────┼───────────────────┼──────────────────┤   ├────────────┼─────────────────┼───────────────────┼──────────────────┴──────────────────┴───────────╯
                                                        &kp LGUI         &trans              &kp SPACE              &trans       &trans            &trans
         //                                           ╰────────────────┴───────────────────┴──────────────────╯   ╰────────────┴─────────────────┴───────────────────╯
