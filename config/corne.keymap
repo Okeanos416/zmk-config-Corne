@@ -31,12 +31,6 @@
             key-positions = <2 3 4>;
             bindings = <&tog Dir>;
         };
-    };
-};
-
-/ {
-    combos {
-        compatible = "zmk,combos";
         combo_esc {
             timeout-ms = <50>;
             key-positions = <12 16>;
@@ -44,6 +38,7 @@
         };
     };
 };
+
 
 / {
     behaviors {
@@ -108,7 +103,7 @@
         //| LGUI       |            |                |                |  left             |  right           |   |  up        |  down           |                   |                  |                  |           |
             &kp LGUI     &trans       &trans           &trans           &kp LEFT            &kp RIGHT              &kp UP       &kp DOWN          &trans              &trans             &trans             &trans      
         //╰────────────┴────────────┴────────────────┼────────────────┼───────────────────┼──────────────────┤   ├────────────┼─────────────────┼───────────────────┼──────────────────┴──────────────────┴───────────╯
-                                                       &kp LGUI         &trans              &kp SPACE              &trans       &trans            &trans
+                                                       &kp LGUI         &kp LEFT            &kp RIGHT              &kp UP       &kp DOWN          &trans
         //                                           ╰────────────────┴───────────────────┴──────────────────╯   ╰────────────┴─────────────────┴───────────────────╯
                         >;
                 };
