@@ -103,7 +103,7 @@
             &kp TAB      &kp LALT     &mkp RCLK        &mmv MOVE_UP     &mkp LCLK           &mwh SCROLL_UP         &kp C_AC_BACK       &kp C_AC_HOME         &trans         &trans          &trans     &trans       
         //├────────────┼────────────┼────────────────┼────────────────┼───────────────────┼──────────────────┤   ├────────────┼─────────────────┼───────────────────┼──────────────────┼──────────────────┼───────────┤
         //| SHFT       |            |  m left        |  m down        |  m right          |  Scroll down     |   |            |  n LEFT         |  m DOWN           |  m RIGHT         |  Scroll down     |           |
-            &kp LSHFT    &trans       &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT     &mwh SCROLL_DOWN       &kp C_VOL_UP    &kp C_VOL_DN    &kp C_MUTE         &trans    &transN   &trans   
+            &kp LSHFT    &trans       &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT     &mwh SCROLL_DOWN       &kp C_VOL_UP    &kp C_VOL_DN    &kp C_MUTE         &trans    &trans   &trans   
         //├────────────┼────────────┼────────────────┼────────────────┼───────────────────┼──────────────────┤   ├────────────┼─────────────────┼───────────────────┼──────────────────┼──────────────────┼───────────┤
         //| LGUI       |            |                |                |  left             |  right           |   |  up        |  down           |                   |                  |                  |           |
             &kp LGUI     &trans       &trans           &trans           &kp LEFT            &kp RIGHT              &kp UP       &kp DOWN          &trans              &trans             &trans             &trans      
