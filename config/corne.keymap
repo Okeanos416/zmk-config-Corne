@@ -116,7 +116,7 @@
             &kp LSHFT    &trans       &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT     &mwh SCROLL_DOWN       &kp C_VOL_UP    &kp C_VOL_DN    &kp C_MUTE         &trans    &trans   &trans   
         //├────────────┼────────────┼────────────────┼────────────────┼───────────────────┼──────────────────┤   ├────────────┼─────────────────┼───────────────────┼──────────────────┼──────────────────┼───────────┤
         //| LGUI       |            |                |                |                   |                  |   |            |                 |                   |                  |                  |           |
-            &kp LGUI     &trans       &kp C_AC_BACK    &kp C_AC_HOME    &trans              &trans                 &trans       &trans          &trans              &trans             &trans             &C_AL_CCC      
+            &kp LGUI     &trans       &kp C_AC_BACK    &kp C_AC_HOME    &trans              &trans                 &trans       &trans          &trans              &trans             &trans             &kp C_AL_CCC      
         //╰────────────┴────────────┴────────────────┼────────────────┼───────────────────┼──────────────────┤   ├────────────┼─────────────────┼───────────────────┼──────────────────┴──────────────────┴───────────╯
                                                        &kp LGUI         &kp LEFT            &kp RIGHT              &kp UP       &kp DOWN          &trans
         //                                           ╰────────────────┴───────────────────┴──────────────────╯   ╰────────────┴─────────────────┴───────────────────╯
