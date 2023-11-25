@@ -39,7 +39,7 @@
         compatible = "zmk,combos";
         combo_col {
             timeout-ms = <50>;
-            key-positions = <13 14 15 16 19 20 21 22>;
+            key-positions = <15 16 19 20>;
             bindings = <&tog Col>;
         };
     };
