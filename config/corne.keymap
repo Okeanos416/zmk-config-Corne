@@ -107,7 +107,7 @@
             &kp DEL      &kp Q        &kp W         &kp F       &kp P        &kp B              &kp J        &kp L           &kp U            &kp Y         &kp SEMI     &kp MINUS   
         //├────────────┼────────────┼────────────┼────────────┼────────────┼──────────────┤   ├────────────┼───────────────┼────────────────┼─────────────┼────────────┼───────────────┤
         //│  SHFT      │  A         │  R         │  S         │  T         │  G           │   │  M         │  N            │  E             │  I          │  O         │  ' "          │
-            &sk LSHFT   &kp A         HRML(R,      S,           T)           &kp G              &kp M        HRMR(N,         E,               I)            &kp O        &kp SQT    
+            &sk LSHFT    &kp A        HRML(R,      S,           T)           &kp G              &kp M        HRMR(N,         E,               I)            &kp O        &kp SQT    
         //├────────────┼────────────┼────────────┼────────────┼────────────┼──────────────┤   ├────────────┼───────────────┼────────────────┼─────────────┼────────────┼───────────────┤
         //│  CTRL      │  Z         │  X         │  C         │  D         │  V           │   │  K         │  H            │  , <           │  . >        │  / ?       │  ESC          │
             &kp LCTRL    &kp Z        &kp X        &kp C        &kp D        &kp V              &kp K        &kp H           &kp COMMA        &kp DOT       &kp FSLH     &lt Func ESC   
