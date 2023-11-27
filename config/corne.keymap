@@ -80,7 +80,7 @@
 
 / {
     macros {
-        backwhole: zed_em_kay {
+        backw: zed_em_kay {
             label = "ZM_zed_em_kay";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -109,7 +109,7 @@
         //│  CTRL      │  Z         │  X         │  C         │  V         │  B           │   │  N         │  M            │ , <            │ . >         │ / ?        │  ESC          │
             &kp LCTRL    &kp Z        &kp X        &kp C        &kp V        &kp B              &kp N        &kp M           &kp COMMA        &kp DOT       &kp FSLH     &lt Func ESC   
         //╰────────────┴────────────┴────────────┼────────────┼────────────┼──────────────┤   ├────────────┼───────────────┼────────────────┼─────────────┴────────────┴───────────────╯
-                                                   &backwhole   &kp SPACE    &lt Num ENTER      &kp ENTER    &lt Dir SPACE   &kp BSPC 
+                                                   &backw       &kp SPACE    &lt Num ENTER      &kp ENTER    &lt Dir SPACE   &kp BSPC 
         //                                       ╰────────────┴────────────┴──────────────╯   ╰────────────┴───────────────┴────────────────╯
                         >;
                 };
