@@ -68,6 +68,17 @@
 };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_bkslash {
+            timeout-ms = <50>;
+            key-positions = <17 18>;
+            bindings = <&kp BACKSLASH>;
+        };
+    };
+};
+
+/ {
     macros {
         backwhole: zed_em_kay {
             label = "ZM_zed_em_kay";
@@ -95,7 +106,6 @@
             bindings = <&kp>, <&kp>;
         };
     };
-
         keymap {
                 compatible = "zmk,keymap";
 
@@ -111,7 +121,7 @@
         //│  CTRL      │  Z         │  X         │  C         │  V         │  B           │   │  N         │  M            │ , <            │ . >         │ / ?        │  ESC          │
             &kp LCTRL    &kp Z        &kp X        &kp C        &kp V        &kp B              &kp N        &kp M           &kp COMMA        &kp DOT       &kp FSLH     &lt Func ESC   
         //╰────────────┴────────────┴────────────┼────────────┼────────────┼──────────────┤   ├────────────┼───────────────┼────────────────┼─────────────┴────────────┴───────────────╯
-                                                   &kp BSPC     &kp SPACE    &lt Num ENTER      &kp ENTER    &lt Dir SPACE   &mt backwhole BSPC
+                                                   &kp BSPC     &kp SPACE    &lt Num ENTER      &kp ENTER    &lt Dir SPACE   &backwhole
         //                                       ╰────────────┴────────────┴──────────────╯   ╰────────────┴───────────────┴────────────────╯
                         >;
                 };
@@ -128,7 +138,7 @@
         //│  CTRL      │  Z         │  X         │  C         │  D         │  V           │   │  K         │  H            │  , <           │  . >        │  / ?       │  ESC          │
             &kp LCTRL    &kp Z        &kp X        &kp C        &kp D        &kp V              &kp K        &kp H           &kp COMMA        &kp DOT       &kp FSLH     &lt Func ESC   
         //╰────────────┴────────────┴────────────┼────────────┼────────────┼──────────────┤   ├────────────┼───────────────┼────────────────┼─────────────┴────────────┴───────────────╯
-                                                   &kp BSPC     &kp SPACE    &lt Num ENTER      &kp ENTER    &lt Dir SPACE   &mt backwhole BSPC
+                                                   &kp BSPC     &kp SPACE    &lt Num ENTER      &kp ENTER    &lt Dir SPACE   &backwhole
         //                                       ╰────────────┴────────────┴──────────────╯   ╰────────────┴───────────────┴────────────────╯
                         >;
                 };
@@ -145,7 +155,7 @@
         //│            │  {         │  1         │  2         │  3         │  }         │   │  =              │  $            │  F9        │  F10       │  F11       │  F12        │
             &trans       &kp LBRC     &kp N1       &kp N2       &kp N3       &kp RBRC         &kp EQUAL         &kp DLLR        &kp F9       &kp F10      &kp F11      &kp F12     
         //╰────────────┴────────────┴────────────┼────────────┼────────────┼────────────┤   ├─────────────────┼───────────────┼────────────┼────────────┴────────────┴─────────────╯
-                                                   &kp DOT      &kp N0       &trans           &trans            &trans          &trans
+                                                   &kp DOT      &kp N0       &trans           &kp CARET         &kp UNDER       &trans
         //                                       ╰────────────┴────────────┴────────────╯   ╰─────────────────┴───────────────┴────────────╯
                         >;
                 };
