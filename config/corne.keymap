@@ -68,6 +68,21 @@
 };
 
 / {
+    macros {
+        backwhole: zed_em_kay {
+            label = "ZM_zed_em_kay";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp BSPC>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+    };
+};
+
+/ {
     behaviors {
         ht: hold_tap {
             label = "hold_tap";
@@ -91,12 +106,12 @@
             &kp DEL      &kp Q        &kp W         &kp E       &kp R        &kp T              &kp Y        &kp U           &kp I            &kp O         &kp P        &kp MINUS   
         //├────────────┼────────────┼────────────┼────────────┼────────────┼──────────────┤   ├────────────┼───────────────┼────────────────┼─────────────┼────────────┼───────────────┤
         //│  SHFT      │  A         │  S         │  D         │  F         │  G           │   │  H         │  J            │  K             │  L          │  ; :       │  ' "          │
-            &kp LSHFT   &kp A         HRML(S,      D,           F)           &kp G              &kp H        HRMR(J,         K,               L)            &kp SEMI     &kp SQT    
+            &sk LSHFT   &kp A         HRML(S,      D,           F)           &kp G              &kp H        HRMR(J,         K,               L)            &kp SEMI     &kp SQT    
         //├────────────┼────────────┼────────────┼────────────┼────────────┼──────────────┤   ├────────────┼───────────────┼────────────────┼─────────────┼────────────┼───────────────┤
         //│  CTRL      │  Z         │  X         │  C         │  V         │  B           │   │  N         │  M            │ , <            │ . >         │ / ?        │  ESC          │
             &kp LCTRL    &kp Z        &kp X        &kp C        &kp V        &kp B              &kp N        &kp M           &kp COMMA        &kp DOT       &kp FSLH     &lt Func ESC   
         //╰────────────┴────────────┴────────────┼────────────┼────────────┼──────────────┤   ├────────────┼───────────────┼────────────────┼─────────────┴────────────┴───────────────╯
-                                                   &kp BSPC     &kp SPACE    &lt Num ENTER      &kp ENTER    &lt Dir SPACE   &mt LCTRL BSPC
+                                                   &kp BSPC     &kp SPACE    &lt Num ENTER      &kp ENTER    &lt Dir SPACE   &mt backwhole BSPC
         //                                       ╰────────────┴────────────┴──────────────╯   ╰────────────┴───────────────┴────────────────╯
                         >;
                 };
@@ -108,12 +123,12 @@
             &kp DEL      &kp Q        &kp W         &kp F       &kp P        &kp B              &kp J        &kp L           &kp U            &kp Y         &kp SEMI     &kp MINUS   
         //├────────────┼────────────┼────────────┼────────────┼────────────┼──────────────┤   ├────────────┼───────────────┼────────────────┼─────────────┼────────────┼───────────────┤
         //│  SHFT      │  A         │  R         │  S         │  T         │  G           │   │  M         │  N            │  E             │  I          │  O         │  ' "          │
-            &kp LSHFT   &kp A         HRML(R,      S,           T)           &kp G              &kp M        HRMR(N,         E,               I)            &kp O        &kp SQT    
+            &sk LSHFT   &kp A         HRML(R,      S,           T)           &kp G              &kp M        HRMR(N,         E,               I)            &kp O        &kp SQT    
         //├────────────┼────────────┼────────────┼────────────┼────────────┼──────────────┤   ├────────────┼───────────────┼────────────────┼─────────────┼────────────┼───────────────┤
         //│  CTRL      │  Z         │  X         │  C         │  D         │  V           │   │  K         │  H            │  , <           │  . >        │  / ?       │  ESC          │
             &kp LCTRL    &kp Z        &kp X        &kp C        &kp D        &kp V              &kp K        &kp H           &kp COMMA        &kp DOT       &kp FSLH     &lt Func ESC   
         //╰────────────┴────────────┴────────────┼────────────┼────────────┼──────────────┤   ├────────────┼───────────────┼────────────────┼─────────────┴────────────┴───────────────╯
-                                                   &kp BSPC     &kp SPACE    &lt Num ENTER      &kp ENTER    &lt Dir SPACE   &mt LCTRL BSPC
+                                                   &kp BSPC     &kp SPACE    &lt Num ENTER      &kp ENTER    &lt Dir SPACE   &mt backwhole BSPC
         //                                       ╰────────────┴────────────┴──────────────╯   ╰────────────┴───────────────┴────────────────╯
                         >;
                 };
