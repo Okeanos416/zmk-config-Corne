@@ -86,7 +86,8 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp BSPC>
+                , <&macro_press &kp BSPC>
+                , <&macro_release &kp BSPC>
                 , <&macro_release &kp LCTRL>
                 ;
         };
@@ -106,6 +107,7 @@
             bindings = <&kp>, <&kp>;
         };
     };
+
         keymap {
                 compatible = "zmk,keymap";
 
