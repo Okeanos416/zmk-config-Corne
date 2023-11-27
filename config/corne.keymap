@@ -111,7 +111,7 @@
         //│  CTRL      │  Z         │  X         │  C         │  V         │  B           │   │  N         │  M            │ , <            │ . >         │ / ?        │  ESC          │
             &kp LCTRL    &kp Z        &kp X        &kp C        &kp V        &kp B              &kp N        &kp M           &kp COMMA        &kp DOT       &kp FSLH     &lt Func ESC   
         //╰────────────┴────────────┴────────────┼────────────┼────────────┼──────────────┤   ├────────────┼───────────────┼────────────────┼─────────────┴────────────┴───────────────╯
-                                                   &kp BSPC     &kp SPACE    &lt Num ENTER      &kp ENTER    &lt Dir SPACE   &backwhole
+                                                   &backwhole   &kp SPACE    &lt Num ENTER      &kp ENTER    &lt Dir SPACE   &kp BSPC 
         //                                       ╰────────────┴────────────┴──────────────╯   ╰────────────┴───────────────┴────────────────╯
                         >;
                 };
@@ -128,7 +128,7 @@
         //│  CTRL      │  Z         │  X         │  C         │  D         │  V           │   │  K         │  H            │  , <           │  . >        │  / ?       │  ESC          │
             &kp LCTRL    &kp Z        &kp X        &kp C        &kp D        &kp V              &kp K        &kp H           &kp COMMA        &kp DOT       &kp FSLH     &lt Func ESC   
         //╰────────────┴────────────┴────────────┼────────────┼────────────┼──────────────┤   ├────────────┼───────────────┼────────────────┼─────────────┴────────────┴───────────────╯
-                                                   &kp BSPC     &kp SPACE    &lt Num ENTER      &kp ENTER    &lt Dir SPACE   &backwhole
+                                                   &backwhole   &kp SPACE    &lt Num ENTER      &kp ENTER    &lt Dir SPACE   &kp BSPC 
         //                                       ╰────────────┴────────────┴──────────────╯   ╰────────────┴───────────────┴────────────────╯
                         >;
                 };
