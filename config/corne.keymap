@@ -85,9 +85,11 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LCTRL>
-                , <&kp BSPC>
+                = <&macro_press &kp BSPC>
+                , <&macro_wait_time 50>
+                , <&macro_press &kp LCTRL>
                 , <&macro_release &kp LCTRL>
+                , <&macro_release &kp BSPC>
                 ;
         };
     };
