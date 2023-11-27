@@ -78,20 +78,6 @@
     };
 };
 
-/ {
-    macros {
-        backw: zed_em_kay {
-            label = "ZM_zed_em_kay";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&kp BSPC>
-                , <&macro_release &kp LCTRL>
-                ;
-        };
-    };
-};
 
 / {
         keymap {
@@ -109,7 +95,7 @@
         //│  CTRL      │  Z         │  X         │  C         │  V         │  B           │   │  N         │  M            │ , <            │ . >         │ / ?        │  ESC          │
             &kp LCTRL    &kp Z        &kp X        &kp C        &kp V        &kp B              &kp N        &kp M           &kp COMMA        &kp DOT       &kp FSLH     &lt Func ESC   
         //╰────────────┴────────────┴────────────┼────────────┼────────────┼──────────────┤   ├────────────┼───────────────┼────────────────┼─────────────┴────────────┴───────────────╯
-                                                   &backw       &kp SPACE    &lt Num ENTER      &kp ENTER    &lt Dir SPACE   &kp BSPC 
+                                                   &kp BSPC     &kp SPACE    &lt Num ENTER      &kp ENTER    &lt Dir SPACE   &kp BSPC 
         //                                       ╰────────────┴────────────┴──────────────╯   ╰────────────┴───────────────┴────────────────╯
                         >;
                 };
@@ -126,7 +112,7 @@
         //│  CTRL      │  Z         │  X         │  C         │  D         │  V           │   │  K         │  H            │  , <           │  . >        │  / ?       │  ESC          │
             &kp LCTRL    &kp Z        &kp X        &kp C        &kp D        &kp V              &kp K        &kp H           &kp COMMA        &kp DOT       &kp FSLH     &lt Func ESC   
         //╰────────────┴────────────┴────────────┼────────────┼────────────┼──────────────┤   ├────────────┼───────────────┼────────────────┼─────────────┴────────────┴───────────────╯
-                                                   &backw       &kp SPACE    &lt Num ENTER      &kp ENTER    &lt Dir SPACE   &kp BSPC 
+                                                   &kp BSPC     &kp SPACE    &lt Num ENTER      &kp ENTER    &lt Dir SPACE   &kp BSPC 
         //                                       ╰────────────┴────────────┴──────────────╯   ╰────────────┴───────────────┴────────────────╯
                         >;
                 };
