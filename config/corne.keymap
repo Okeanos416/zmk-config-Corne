@@ -87,7 +87,6 @@
             bindings
                 = <&macro_press &kp LCTRL>
                 , <&macro_press &kp BSPC>
-                , <&macro_release &kp BSPC>
                 , <&macro_release &kp LCTRL>
                 , <&macro_release &kp BSPC>
                 ;
