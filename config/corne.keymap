@@ -36,8 +36,13 @@
         };
         combo_cap {
             timeout-ms = <50>;
-            key-positions = <38 39>;
+            key-positions = <14 38>;
             bindings = <&kp CAPS>;
+        };
+        combo_dllr {
+            timeout-ms = <50>;
+            key-positions = <15 38>;
+            bindings = <&kp DLLR>;
         };
         combo_col {
             timeout-ms = <50>;
@@ -103,7 +108,7 @@
         //│  CTRL          │  Z         │  X         │  C         │  V         │  B           │   │  N         │  M            │ , <            │ . >         │ / ?        │  ESC          │
             &mt LCTRL GRAVE  &kp Z        &kp X        &kp C        &kp V        &kp B              &kp N        &kp M           &kp COMMA        &kp DOT       &kp FSLH     &lt Func ESC   
         //╰────────────────┴────────────┴────────────┼────────────┼────────────┼──────────────┤   ├────────────┼───────────────┼────────────────┼─────────────┴────────────┴───────────────╯
-                                                       &backwhole   &kp SPACE    &lt Num ENTER      &kp ENTER    &lt Dir SPACE   &kp BSPC
+                                                       &kp BSPC     &kp SPACE    &lt Num ENTER      &kp ENTER    &lt Dir SPACE   &kp BSPC
         //                                           ╰────────────┴────────────┴──────────────╯   ╰────────────┴───────────────┴────────────────╯
                         >;
                 };
@@ -119,7 +124,7 @@
         //│  CTRL          │  Z         │  X         │  C         │  D         │  V           │   │  K         │  H            │  , <           │  . >        │  / ?       │  ESC          │
             &mt LCTRL GRAVE  &kp Z        &kp X        &kp C        &kp D        &kp V              &kp K        &kp H           &kp COMMA        &kp DOT       &kp FSLH     &lt Func ESC   
         //╰────────────────┴────────────┴────────────┼────────────┼────────────┼──────────────┤   ├────────────┼───────────────┼────────────────┼─────────────┴────────────┴───────────────╯
-                                                       &backwhole   &kp SPACE    &lt Num ENTER      &kp ENTER    &lt Dir SPACE   &kp BSPC 
+                                                       &kp BSPC     &kp SPACE    &lt Num ENTER      &kp ENTER    &lt Dir SPACE   &kp BSPC 
         //                                           ╰────────────┴────────────┴──────────────╯   ╰────────────┴───────────────┴────────────────╯
                         >;
                 };
