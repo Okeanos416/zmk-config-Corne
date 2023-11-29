@@ -32,7 +32,7 @@
         combo_bkslash {
             timeout-ms = <50>;
             key-positions = <15 38>;
-            bindings = <&kp BACKSLASH>;
+            bindings = <&ht PIPE BACKSLASH >;
         };
         combo_cap {
             timeout-ms = <50>;
