@@ -103,16 +103,6 @@
             global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
-        sht: hold_tap {
-            label = "hold_tap";
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <220>;
-            quick-tap-ms = <150>;
-            global-quick-tap;
-            bindings = <&sk>, <&kp>;
-        };
     };
         keymap {
                 compatible = "zmk,keymap";
@@ -120,7 +110,7 @@
                         bindings = <
         //╭────────────────┬────────────┬────────────┬────────────┬────────────┬──────────────╮   ╭────────────┬───────────────┬────────────────┬─────────────┬────────────┬───────────────╮
         //│  DEL           │  Q         │  W         │  E         │  R         │  T           │   │  Y         │  U            │  I             │  O          │  P         │  -            │
-            &lt WinMan DEL   &kp Q        &kp W        &sht LSHFT E &kp R        &kp T              &kp Y        &kp U           &kp I            &kp O         &kp P        &kp MINUS   
+            &lt WinMan DEL   &kp Q        &kp W        &kp E        &kp R        &kp T              &kp Y        &kp U           &kp I            &kp O         &kp P        &kp MINUS   
         //├────────────────┼────────────┼────────────┼────────────┼────────────┼──────────────┤   ├────────────┼───────────────┼────────────────┼─────────────┼────────────┼───────────────┤
         //│  SHFT          │  A         │  S         │  D         │  F         │  G           │   │  H         │  J            │  K             │  L          │  ; :       │  ' "          │
             &sk LSHFT        &kp A        HRML(S,      D,           F)           &kp G              &kp H        HRMR(J,         K,               L)            &kp SEMI     &kp SQT    
@@ -136,7 +126,7 @@
                         bindings = <
         //╭────────────────┬────────────┬────────────┬────────────┬────────────┬──────────────╮   ╭────────────┬───────────────┬────────────────┬─────────────┬────────────┬───────────────╮
         //│  DEL           │  Q         │  W         │  F         │  P         │  B           │   │  J         │  L            │  U             │  Y          │  ; :       │  -            │
-            &lt WinMan DEL   &kp Q        &kp W        &sht LSHFT F &kp P        &kp B              &kp J        &kp L           &kp U            &kp Y         &kp SEMI     &kp MINUS   
+            &lt WinMan DEL   &kp Q        &kp W        &kp F        &kp P        &kp B              &kp J        &kp L           &kp U            &kp Y         &kp SEMI     &kp MINUS   
         //├────────────────┼────────────┼────────────┼────────────┼────────────┼──────────────┤   ├────────────┼───────────────┼────────────────┼─────────────┼────────────┼───────────────┤
         //│  SHFT          │  A         │  R         │  S         │  T         │  G           │   │  M         │  N            │  E             │  I          │  O         │  ' "          │
             &sk LSHFT        &kp A        HRML(R,      S,           T)           &kp G              &kp M        HRMR(N,         E,               I)            &kp O        &kp SQT    
@@ -152,7 +142,7 @@
                         bindings = <
         //╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮   ╭─────────────────┬───────────────┬────────────┬────────────┬────────────┬─────────────╮
         //│            │  (         │  7         │  8         │  9         │  )         │   │  +              │  -            │  F1        │  F2        │  F3        │  F4         │
-            &trans       &kp LPAR     &kp N7       &kp N8       &kp N9      &kp RPAR          &kp PLUS         &kp MINUS        &kp F1      &kp F2       &kp F3       &kp F4      
+            &trans       &kp LPAR     &kp N7       &kp N8       &kp N9       &kp RPAR         &kp PLUS          &kp MINUS       &kp F1      &kp F2       &kp F3       &kp F4      
         //├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├─────────────────┼───────────────┼────────────┼────────────┼────────────┼─────────────┤
         //│            │  [         │  4         │  5         │  6         │  ]         │   │  *              │  /            │  F5        │  F6        │  F7        │  F8         │
             &trans       &kp LBKT     &kp N4       &kp N5       &kp N6       &kp RBKT         &kp KP_MULTIPLY   &kp KP_DIVIDE   &kp F5       &kp F6       &kp F7       &kp F8      
