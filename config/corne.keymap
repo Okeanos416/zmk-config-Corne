@@ -59,6 +59,16 @@
             key-positions = <0 12 24>;
             bindings = <&sl Sym>;
         };
+        combo_del {
+            timeout-ms = <50>;
+            key-positions = <13 25>;
+            bindings = <&kp DEL>;
+        };
+        combo_bspc {
+            timeout-ms = <50>;
+            key-positions = <22 34>;
+            bindings = <&kp BSPC>;
+        };
     };
 };
 
@@ -93,6 +103,16 @@
             global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
+        sht: hold_tap {
+            label = "hold_tap";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <220>;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            bindings = <&sk>, <&kp>;
+        };
     };
         keymap {
                 compatible = "zmk,keymap";
@@ -100,7 +120,7 @@
                         bindings = <
         //╭────────────────┬────────────┬────────────┬────────────┬────────────┬──────────────╮   ╭────────────┬───────────────┬────────────────┬─────────────┬────────────┬───────────────╮
         //│  DEL           │  Q         │  W         │  E         │  R         │  T           │   │  Y         │  U            │  I             │  O          │  P         │  -            │
-            &lt WinMan DEL   &kp Q        &kp W         &kp E       &kp R        &kp T              &kp Y        &kp U           &kp I            &kp O         &kp P        &kp MINUS   
+            &lt WinMan DEL   &kp Q        &kp W        &sht LSHFT E &kp R        &kp T              &kp Y        &kp U           &kp I            &kp O         &kp P        &kp MINUS   
         //├────────────────┼────────────┼────────────┼────────────┼────────────┼──────────────┤   ├────────────┼───────────────┼────────────────┼─────────────┼────────────┼───────────────┤
         //│  SHFT          │  A         │  S         │  D         │  F         │  G           │   │  H         │  J            │  K             │  L          │  ; :       │  ' "          │
             &sk LSHFT        &kp A        HRML(S,      D,           F)           &kp G              &kp H        HRMR(J,         K,               L)            &kp SEMI     &kp SQT    
@@ -116,7 +136,7 @@
                         bindings = <
         //╭────────────────┬────────────┬────────────┬────────────┬────────────┬──────────────╮   ╭────────────┬───────────────┬────────────────┬─────────────┬────────────┬───────────────╮
         //│  DEL           │  Q         │  W         │  F         │  P         │  B           │   │  J         │  L            │  U             │  Y          │  ; :       │  -            │
-            &lt WinMan DEL   &kp Q        &kp W         &kp F       &kp P        &kp B              &kp J        &kp L           &kp U            &kp Y         &kp SEMI     &kp MINUS   
+            &lt WinMan DEL   &kp Q        &kp W        &sht LSHFT F &kp P        &kp B              &kp J        &kp L           &kp U            &kp Y         &kp SEMI     &kp MINUS   
         //├────────────────┼────────────┼────────────┼────────────┼────────────┼──────────────┤   ├────────────┼───────────────┼────────────────┼─────────────┼────────────┼───────────────┤
         //│  SHFT          │  A         │  R         │  S         │  T         │  G           │   │  M         │  N            │  E             │  I          │  O         │  ' "          │
             &sk LSHFT        &kp A        HRML(R,      S,           T)           &kp G              &kp M        HRMR(N,         E,               I)            &kp O        &kp SQT    
