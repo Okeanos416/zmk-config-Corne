@@ -23,6 +23,7 @@
 #define Dir 4
 #define Func 5
 #define WinMan 6
+#define Gam 7
 
 
 
@@ -72,7 +73,11 @@
         gaming_lay {
             timeout-ms = <50>;
             key-positions = <13 17 18 20>;
+<<<<<<< HEAD
             bindings = <&tog gaming_layer>;
+=======
+            bindings = <&tog Gam>;
+>>>>>>> d1f59db7b73fecbe461f709960a584255fac868e
         };
     };
 };
