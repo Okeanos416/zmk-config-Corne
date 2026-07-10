@@ -33,7 +33,7 @@
         combo_bkslash {
             timeout-ms = <50>;
             key-positions = <15 38>;
-            bindings = <&ht PIPE BACKSLASH >;
+            bindings = <&ht PIPE BACKSLASH>;
         };
         combo_cap {
             timeout-ms = <50>;
@@ -69,11 +69,6 @@
             timeout-ms = <50>;
             key-positions = <22 34>;
             bindings = <&kp BSPC>;
-        };
-        gaming_lay {
-            timeout-ms = <50>;
-            key-positions = <13 17 18 20>;
-            bindings = <&tog Gam>;
         };
     };
 };
