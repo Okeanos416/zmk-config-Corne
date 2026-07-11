@@ -8,7 +8,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/pointing.h>
 
 // Home row mods macro
 #define HRML(k2,k3,k4) &ht LALT k2  &ht TAB k3  &ht LGUI k4
@@ -20,10 +19,9 @@
 #define Col 1
 #define Num 2
 #define Sym 3
-#define Dir 4
-#define Func 5
-#define WinMan 6
-#define Gam 7
+#define Func 4
+#define WinMan 5
+#define Gam 6
 
 
 
@@ -174,22 +172,6 @@
         //╰────────────┴────────────┴────────────┼────────────┼────────────┼────────────┤   ├─────────────────┼───────────────┼────────────┼────────────┴────────────┴─────────────╯
                                                    &kp DOT      &kp N0       &trans           &kp CARET         &kp UNDER       &trans
         //                                       ╰────────────┴────────────┴────────────╯   ╰─────────────────┴───────────────┴────────────╯
-                        >;
-                };
-                mouse_layer {
-                        bindings = <
-        //╭────────────┬────────────┬────────────────┬────────────────┬───────────────────┬──────────────────╮   ╭───────────────┬─────────────────┬───────────────────┬──────────────────┬──────────────────┬───────────╮
-        //|  TAB       |  ALT       |  R click       |  m up          |  L click          |  Scroll up       |   |  back         |  home           |                   |                  |                  |           |
-            &kp TAB      &kp LALT     &mkp RCLK        &mmv MOVE_UP     &mkp LCLK           &mwh SCROLL_UP         &kp C_AC_BACK   &kp C_AC_HOME     &trans              &trans             &trans             &trans       
-        //├────────────┼────────────┼────────────────┼────────────────┼───────────────────┼──────────────────┤   ├───────────────┼─────────────────┼───────────────────┼──────────────────┼──────────────────┼───────────┤
-        //| SHFT       |            |  m left        |  m down        |  m right          |  Scroll down     |   |  VOL_UP       |  VOL_DN         |  MUTE             |                  |                  |           |
-            &kp LSHFT    &trans       &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT     &mwh SCROLL_DOWN       &kp C_VOL_UP    &kp C_VOL_DN      &kp C_MUTE          &trans             &trans             &trans   
-        //├────────────┼────────────┼────────────────┼────────────────┼───────────────────┼──────────────────┤   ├───────────────┼─────────────────┼───────────────────┼──────────────────┼──────────────────┼───────────┤
-        //| LGUI       |            |  back          |  home          |                   |                  |   |               |                 |                   |                  |                  |           |
-            &kp LGUI     &trans       &kp C_AC_BACK    &kp C_AC_HOME    &trans              &trans                 &trans          &trans            &trans              &trans             &trans             &trans      
-        //╰────────────┴────────────┴────────────────┼────────────────┼───────────────────┼──────────────────┤   ├───────────────┼─────────────────┼───────────────────┼──────────────────┴──────────────────┴───────────╯
-                                                       &kp LGUI         &kp LEFT            &kp RIGHT              &kp UP          &trans            &kp DOWN
-        //                                           ╰────────────────┴───────────────────┴──────────────────╯   ╰───────────────┴─────────────────┴───────────────────╯
                         >;
                 };
                 bluetooth_layer {
