@@ -67,6 +67,11 @@
             key-positions = <22 34>;
             bindings = <&kp BSPC>;
         };
+        gaming_lay {
+            timeout-ms = <50>;
+            key-positions = <13 17 18 20>;
+            bindings = <&tog Gam>;
+        };
     };
 };
 
@@ -90,18 +95,6 @@
 
 
 / {
-    behaviors {
-        ht: hold_tap {
-            label = "hold_tap";
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <220>;
-            quick-tap-ms = <150>;
-            global-quick-tap;
-            bindings = <&kp>, <&kp>;
-        };
-    };
         keymap {
                 compatible = "zmk,keymap";
                 default_layer {
