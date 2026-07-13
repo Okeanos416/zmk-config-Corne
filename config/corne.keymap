@@ -161,13 +161,13 @@
                         bindings = <
         //╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮   ╭─────────────────┬───────────────┬────────────┬────────────┬────────────┬─────────────╮
         //│            │  (         │  &         │  8         │  9         │  )         │   │  +              │  -            │  F1        │  F2        │  F3        │  F4         │
-            &trans       &kp LPAR     &kp AMPS     &kp N8       &kp N9      &kp RPAR          &kp PLUS         &kp MINUS        &kp F1      &kp F2       &kp F3       &kp F4      
+            &trans       &kp LPAR     &kp AMPS     &kp N8       &kp N9       &kp RPAR          &kp PLUS         &kp MINUS        &kp F1       &kp F2       &kp F3       &kp F4      
         //├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├─────────────────┼───────────────┼────────────┼────────────┼────────────┼─────────────┤
         //│            │  [         │  $         │  %         │  ^         │  ]         │   │  *              │  /            │  F5        │  F6        │  F7        │  F8         │
-            &trans       &kp LBKT     &kp DLLR     &kp PRCNT    &kp CARET    &kp RBKT         &kp KP_MULTIPLY   &kp KP_DIVIDE   &kp F5       &kp F6       &kp F7       &kp F8      
+            &trans       &kp LBKT     &kp DLLR     &kp PRCNT    &kp CARET    &kp RBKT          &kp KP_MULTIPLY  &kp KP_DIVIDE    &kp F5       &kp F6       &kp F7       &kp F8      
         //├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├─────────────────┼───────────────┼────────────┼────────────┼────────────┼─────────────┤
         //│            │  {         │  !         │  @         │  #         │  }         │   │  =              │  $            │  F9        │  F10       │  F11       │  F12        │
-            &trans       &kp LBRC     &kp EXCL     &kp AT       &kp HASH     &kp RBRC         &kp EQUAL         &kp DLLR        &kp F9       &kp F10      &kp F11      &kp F12     
+            &trans       &kp LBRC     &kp EXCL     &kp AT       &kp HASH     &kp RBRC          &kp EQUAL        &kp DLLR         &kp F9       &kp F10      &kp F11      &kp F12     
         //╰────────────┴────────────┴────────────┼────────────┼────────────┼────────────┤   ├─────────────────┼───────────────┼────────────┼────────────┴────────────┴─────────────╯
                                                    &kp DOT      &kp N0       &trans           &kp CARET         &kp UNDER       &trans
         //                                       ╰────────────┴────────────┴────────────╯   ╰─────────────────┴───────────────┴────────────╯
@@ -183,7 +183,7 @@
             &bt BT_CLR    &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4       &kp C_PREV      &kp C_NEXT      &kp C_PP     &trans        &trans       &trans    
         //├─────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├───────────────┼───────────────┼────────────┼─────────────┼────────────┼───────────┤
         //│             │              │              │              │              │              │   │  BRIGHT       │  DIM          │            │             │            │           │
-            &trans        &trans         &trans         &trans         &trans         &trans             &kp C_BRI_UP    &kp C_BRI_DN    &trans       &trans        &trans       &trans   
+            &out OUT_USB  &out OUT_BLE   &trans         &trans         &trans         &trans             &kp C_BRI_UP    &kp C_BRI_DN    &trans       &trans        &trans       &trans   
         //╰─────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤   ├───────────────┼───────────────┼────────────┼─────────────┴────────────┴───────────╯
                                                         &trans         &trans         &trans             &kp C_VOL_UP    &kp C_VOL_DN    &kp C_MUTE
         //                                            ╰──────────────┴──────────────┴──────────────╯   ╰───────────────┴───────────────┴────────────╯
