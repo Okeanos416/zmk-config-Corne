@@ -56,15 +56,15 @@
             key-positions = <15 16 19 20>;
             bindings = <&tog Col>;
         };
-        combo_Dir {
-            timeout-ms = <50>;
-            key-positions = <2 3 4>;
-            bindings = <&tog Dir>;
-        };
         combo_sym {
             timeout-ms = <50>;
             key-positions = <0 12 24>;
             bindings = <&sl Sym>;
+        };
+        combo_Gam {
+            timeout-ms = <50>;
+            key-positions = <13 17 18 20>;
+            bindings = <&tog Gam>;
         };
     };
 };
