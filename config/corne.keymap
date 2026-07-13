@@ -77,24 +77,21 @@
 
 
 
+
+
 / {
-    macros {
-        backwhole: zed_em_kay {
-            label = "ZM_zed_em_kay";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_press &kp BSPC>
-                , <&macro_release &kp LCTRL>
-                , <&macro_release &kp BSPC>
-                ;
+    behaviors {
+        ht: hold_tap {
+            label = "hold_tap";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <220>;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            bindings = <&kp>, <&kp>;
         };
     };
-};
-
-
-/ {
         keymap {
                 compatible = "zmk,keymap";
                 default_layer {
