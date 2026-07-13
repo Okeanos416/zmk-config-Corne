@@ -71,21 +71,6 @@
 
 
 
-/ {
-    macros {
-        backwhole: zed_em_kay {
-            label = "ZM_zed_em_kay";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_press &kp BSPC>
-                , <&macro_release &kp LCTRL>
-                , <&macro_release &kp BSPC>
-                ;
-        };
-    };
-};
 
 
 / {
