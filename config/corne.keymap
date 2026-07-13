@@ -66,11 +66,6 @@
             key-positions = <0 12 24>;
             bindings = <&sl Sym>;
         };
-        combo_Gam {
-            timeout-ms = <50>;
-            key-positions = <13 17 18 20>;
-            bindings = <&tog Gam>;
-        };
     };
 };
 
