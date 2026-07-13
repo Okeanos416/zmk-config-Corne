@@ -20,7 +20,6 @@
 #define Sym 3
 #define Func 4
 #define WinMan 5
-#define Gam 6
 
 
 
